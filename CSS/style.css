@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    /* -webkit-transition: .2s linear;
+    transition: .2s linear; */
+    -webkit-appearance: none;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+} 
+
+html::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+html::-webkit-scrollbar
+{
+	width: 1rem;
+	background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+section
+{
+    padding: 5rem 9%;
+}
+
+/*------------------------------ Header ------------------------------*/
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 9%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    /* -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox; */
+}
+
+.header.active
+{
+    background: #fff;
+    box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.24);
+}
+
+.logo
+{
+    margin-right: auto;
+}
+
+.logo img
+{
+    width: 25rem;
+}
+
+.navbar a
+{
+    margin-left: 2rem;   
+    font-size: 1.7rem;
+    color: gray;
+}
+
+.navbar a:hover
+{
+    color: green;
+}
+
+.navbar #nav-close
+{
+    font-size: 5rem;
+    cursor: pointer;
+    color: gray;
+    display: none;
+}
+
+.icons a,
+.icons div
+{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.icons a:hover,
+.icons div:hover
+{
+    color: green;
+}
+
+#menu-btn
+{
+    display: none;
+}
+
+/*------------------------------ Search From ------------------------------*/
+.search-form
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transform: translateY(-110%);
+}
+
+.search-form.active
+{
+    transform: translateY(0%);
+}
+
+.search-form #close-search
+{
+    position: absolute;
+    top: 2rem;
+    right: 3.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 6rem;
+}
+
+.search-form #close-search:hover
+{
+    color: green;
+}
+
+.search-form form
+{
+    width: 70rem;
+    padding: 0 0 1rem 0;
+    margin: 0 2rem;
+    border-bottom: .2rem solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.search-form input
+{
+    width: 100%;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+    padding-right: 1.5rem;
+}
+
+.search-form input::placeholder
+{
+    color: #aaa;
+}
+
+.search-form label
+{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.search-form label:hover
+{
+    color: green;
+}
+
+/*------------------------------ Home ------------------------------*/
+
+.home
+{
+    padding: 0;
+}
+
+.home .box
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.home .second
+{
+    justify-content: flex-start;
+}
+
+.home .content
+{
+    width: 50rem;
+}
+
+span
+{
+    font-size: 4rem;
+    color: #10221b;
+}
+
+h3
+{
+    font-size: 6rem;
+    color: green;
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+
+p
+{
+    line-height: 2;
+    font-size: 1.5rem;
+    color: #10221b;
+    padding: 1rem 0;
+}
+
+.btn
+{
+    margin-top: 1rem;
+    display: inline-block;
+    border: .2rem solid #10221b;
+    color: #10221b;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover
+{
+    background: #10221b;
+    color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after
+{
+    font-size: 3rem;
+    color: #10221b;
+}
+
+/*------------------------------ Category ------------------------------*/
+
+.heading
+{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color: #10221b;
+}
+
+.category .box-container
+{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: (minmax(29rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+}
+
+.category .box-container .box
+{
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+.category .box-container img
+{
+    height: 20rem;
+    width: 20rem ;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.category .box-container h3
+{
+    font-size: 2rem;
+    text-transform: none;
+}
+
+.category .box-container p
+{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/*------------------------------ About ------------------------------*/
+
+.about
+{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .image
+{
+    flex: 1 1 42rem;
+    padding-right: 5rem;
+    padding-bottom: 0rem;
+}
+
+.about .image img
+{
+    width: 100%;
+    box-shadow: 25px 31px 21px 0px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 25px 31px 21px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 25px 31px 21px 0px rgba(0,0,0,0.24);
+}
+
+.about .content
+{
+    flex: 1 1 42rem;
+}
+
+.about .content h3
+{
+    font-size: 3rem;
+}
+
+.about .content p
+{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/*------------------------------ About ------------------------------*/
+.shop
+{
+    text-align: center;
+}
+
+.shop .slider
+{
+    border: 0.2rem solid #10221b;
+    margin: 1rem 0;
+}
+
+.shop .slider:hover .image .icons
+{
+    transform: translateY(0);
+}
+
+.shop .image
+{
+    height: 30rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop .image img
+{
+    height: 100%;  
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.shop .icons
+{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    left: 0;
+    text-align: center;
+    transform: translateY(7rem);
+}
+
+.shop .icons a
+{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    background: #555;
+    color: #eee;
+    margin: 0 .2rem;
+}
+
+.shop .icons a:hover
+{
+    background: green;
+}
+
+.shop .content
+{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.shop h3
+{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.shop .price
+{
+    padding: 0  0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: green;
+}
+
+.shop .stars i
+{
+    font-size: 1.7rem;
+    color: #FDCC0D;
+}
+
+/*------------------------------ Packages ------------------------------*/
+
+.packages
+{
+    background: #eee;
+}
+
+.packages .box-container
+{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 1.5rem;
+}
+
+.packages .box-container .box
+{
+    text-align: center;
+    background: #fff;
+    border: 0.2rem solid #10221b;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+}
+
+.packages .box-container .box:hover
+{
+    background: #10221b;
+}
+
+.packages .box-container .box:hover .content > * 
+{
+    color: #fff;
+}
+
+.packages .box-container .box:hover .btn
+{
+    border-color: #fff;
+}
+.packages .box-container .box:hover .btn:hover
+{
+    background: #fff;
+    color: #10221b;
+}
+
+.packages .box-container .box .image
+{
+    height: 25rem;
+    overflow: hidden;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+.packages .box-container .box .image img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.packages .box-container .box .content
+{
+    padding: 2rem;
+}
+
+.packages .box-container .content h3
+{
+    font-size: 2rem;
+    color: #10221b;
+}    
+.packages .box-container .content p
+{
+    font-size: 1.5rem;
+    color: #10221b;
+}    
+
+.packages .box-container .box .content .price
+{
+    font-size: 2rem;
+    color: green;
+}
+
+/*------------------------------ Reviews ------------------------------*/
+
+.reviews .slide .text
+{
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    background: #eee;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 3rem;
+}
+
+.reviews .slide .text::before
+{
+    content: '';
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    bottom: -1.3rem;
+    left: .7rem;
+    background: #eee;
+    transform: rotate(45deg);
+}
+
+.reviews .user
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviews .user img
+{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.reviews .user h3
+{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.reviews .user span
+{
+    font-size: 1.5rem;
+    color: green;
+}
+
+/*------------------------------ Blogs ------------------------------*/
+
+.blogs
+{
+    background: rgb(230, 239, 243);
+}
+
+.blogs .slide 
+{
+    text-align: center;
+    padding: 2rem;
+}
+
+.blogs .slide img
+{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.blogs .slide .icons
+{
+    background: #10221b;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: relative;
+    top: -2rem;
+    display: inline-block;
+}
+
+.blogs .slide .icons a
+{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.blogs .slide .icons a:hover
+{
+    color: green;
+}
+
+.blogs .slide .icons .fas
+{
+    color: green;
+    padding-right: 0.5rem;
+}
+
+.blogs .slide h3
+{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.blogs .slide p
+{
+    font-size: 1.4rem;
+}
+
+/*------------------------------ Blogs ------------------------------*/
+
+.newsletter
+{
+    background: #eee;
+}
+
+.newsletter .content
+{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.newsletter .content .heading
+{
+    margin-bottom: 1rem;
+}
+
+.newsletter .content p
+{
+    font-size: 1.6rem;
+}
+
+.newsletter .content form
+{
+    display: flex;
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 5rem;
+    border: .2rem solid #10221b;
+    padding: .7rem;
+}
+
+.newsletter .content form .mail
+{
+    padding: 0 1.3rem;
+    font-size: 1.5rem ;
+    color: #10221b;
+    background: none;
+    width: 100%;
+    text-transform: none;
+}
+
+.newsletter .content form .btn
+{
+    margin-top: 0;
+    border-radius: 5rem;
+    background: #10221b;
+    color: #fff;
+}
+
+.newsletter .content form .btn:hover
+{
+    background: #fff;
+    color: #10221b;
+}
+
+/*------------------------------ Clients ------------------------------*/
+
+.clients .slide
+{
+    text-align: center;
+}
+
+.clients .slide img
+{
+    height: 12rem;
+}
+
+/*------------------------------ Footer ------------------------------*/
+
+.footer
+{
+    background: linear-gradient(rgba(0,0,0.3), rgba(0,0,0,.2)), url(../Image/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3
+{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #eee;
+    padding: 1.5rem 0;
+}
+
+.footer .box-container .box a
+{
+    display: block;
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+.footer .box-container .box a i
+{
+    color: green;
+    padding-right: 0.5rem;
+}
+
+.footer .box-container .box a:hover 
+{
+    color: green;
+}
+
+.footer .box-container .box a:hover i
+{
+    padding-right: 2rem;
+}
+
+.cradit
+{
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #eee;
+}
+
+.cradit a
+{
+    color: #eee;
+}
+
+.cradit span
+{
+    color: rgb(103, 202, 103);
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width:1200px)
+{
+    .header
+    {
+        padding: 0rem  2rem 0rem 0rem;
+    }
+
+    section
+    {
+        padding: 7.5rem 2rem;
+    }
+}
+
+@media (max-width:991px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+
+    .home .box
+    {
+        padding: 1rem;
+        justify-content: center;
+        background-position: right !important;
+    }
+
+    .home .second
+    {
+        justify-content: center;
+        background-position: left !important;
+    }
+
+    .home .content
+    {
+        text-align: center;
+    }
+    span
+    {
+        font-size: 3rem;
+    }
+
+    h3
+    {
+        font-size: 4rem;
+    }
+
+    p
+    {
+        font-size: 1.7rem;
+    }
+
+    .blogs .blogs-slider .swiper-wrapper .slide img
+    {
+        height: 22rem;
+    }
+    
+    .blogs .swiper-slide.slide.swiper-slide-active
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width:768px)
+{
+    section
+    {
+        padding: 2.5rem 9%;
+    }
+
+    #menu-btn
+    {
+        display: inline-block;   /*now menu btn show*/
+    }
+
+    .navbar
+    {
+        position: fixed;
+        top: 0;
+        right: 110%;
+        background: #fff;
+        z-index: 1000;
+        width: 35rem;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .navbar.active
+    {   
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.4);
+    }
+
+    .navbar a
+    {
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+
+    .navbar #nav-close
+    {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after
+    {
+        display: none;
+
+    }
+
+    .about .image
+    {
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }   
+
+    /* .clients .swiper-slide img
+    {
+        height: 10.9rem;
+    } */
+
+}
+
+@media (max-width:458px)
+{
+    .heading
+    {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
